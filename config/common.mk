@@ -165,6 +165,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
      NavigationBarModeGesturalOverlayFS
 
+# Fonts
+include vendor/lineage/config/fonts.mk
+
 # Gboard side padding
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.com.google.ime.kb_pad_port_l=4 \
