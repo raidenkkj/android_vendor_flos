@@ -250,6 +250,12 @@ ifeq ($(TARGET_FLOS), true)
     LINEAGE_BUILDTYPE := UNOFFICIAL
 endif
 
+ifneq ($(FLOSS_PACK), )
+    FLOS_TYPE := $(FLOSS_PACK)
+else
+    FLOS_TYPE := vanilla
+endif
+
 # Do not enforce privapp-permissions whitelist on unofficial builds
 ifneq ($(LINEAGE_BUILDTYPE), UNOFFICIAL)
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
@@ -257,7 +263,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 endif
 
 ifeq ($(TARGET_FLOS), true)
-    LINEAGE_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-FORK-$(shell date -u +%Y%m%d-%H%M)-$(LINEAGE_BUILD)
+    LINEAGE_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-FORK-$(FLOS_TYPE)-$(shell date -u +%Y%m%d-%H%M)-$(LINEAGE_BUILD)
 else
   ifeq ($(LINEAGE_BUILDTYPE), RELEASE)
     ifndef TARGET_VENDOR_RELEASE_BUILD_ID
