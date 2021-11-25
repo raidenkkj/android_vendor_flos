@@ -80,6 +80,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/lineage/config/permissions/org.lineageos.android.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/org.lineageos.android.xml
 
+# Navbar
+PRODUCT_PACKAGES += \
+     NavigationBarModeGesturalOverlayFS
+
 # Include AOSP audio files
 include vendor/lineage/config/aosp_audio.mk
 
