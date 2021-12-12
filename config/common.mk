@@ -91,6 +91,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/lineage/prebuilt/common/etc/init/init.lineage-system.rc:$(TARGET_COPY_OUT_PRODUCT)/etc/init/init.lineage-system.rc
 
+# Copy all app permissions xml
+$(foreach f,$(wildcard vendor/octavi/prebuilt/common/system_ext/etc/permissions/*.xml),\
+        $(eval PRODUCT_COPY_FILES += $(f):$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/$(notdir $f)))
+
 # Enable Android Beam on all targets
 PRODUCT_COPY_FILES += \
     vendor/lineage/config/permissions/android.software.nfc.beam.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.software.nfc.beam.xml
