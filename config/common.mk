@@ -99,6 +99,10 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 $(call inherit-product, vendor/lineage/config/rro_overlays.mk)
 
+ifeq ($(WITH_CORE_GMS),true)
+$(call inherit-product, vendor/google/common/common-vendor-core.mk)
+endif
+
 else
 $(warning Building vanilla - without gapps)
 $(warning Add export WITH_GMS=true)
