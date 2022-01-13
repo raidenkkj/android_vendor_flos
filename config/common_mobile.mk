@@ -21,20 +21,6 @@ PRODUCT_PACKAGES += \
     AudioFX
 endif
 
-ifeq ($(PRODUCT_TYPE), go)
-PRODUCT_PACKAGES += \
-    TrebuchetQuickStepGo
-
-PRODUCT_DEXPREOPT_SPEED_APPS += \
-    TrebuchetQuickStepGo
-else
-PRODUCT_PACKAGES += \
-    TrebuchetQuickStep
-
-PRODUCT_DEXPREOPT_SPEED_APPS += \
-    TrebuchetQuickStep
-endif
-
 # Customizations
 PRODUCT_PACKAGES += \
     LineageNavigationBarNoHint \

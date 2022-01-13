@@ -104,6 +104,7 @@ $(call inherit-product, vendor/google/common/common-vendor-core.mk)
 endif
 
 else
+include vendor/lawnchair/lawnchair.mk
 $(warning Building vanilla - without gapps)
 $(warning Add export WITH_GMS=true)
 endif
