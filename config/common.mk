@@ -103,6 +103,10 @@ PRODUCT_COPY_FILES += \
 $(foreach f,$(wildcard vendor/octavi/prebuilt/common/system_ext/etc/permissions/*.xml),\
         $(eval PRODUCT_COPY_FILES += $(f):$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/$(notdir $f)))
 
+# Disable remote keyguard animation
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    persist.wm.enable_remote_keyguard_animation=0
+
 # Enable Android Beam on all targets
 PRODUCT_COPY_FILES += \
     vendor/lineage/config/permissions/android.software.nfc.beam.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.software.nfc.beam.xml
