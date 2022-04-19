@@ -66,12 +66,26 @@ PRODUCT_PRODUCT_PROPERTIES += \
 $(call inherit-product, vendor/lineage/config/rro_overlays.mk)
 
 else
-include vendor/lawnchair/lawnchair.mk
 $(warning Building vanilla - without gapps)
 $(warning Add export WITH_GMS=true)
 PRODUCT_PACKAGES += \
     Jelly \
     LineageSetupWizard
+
+ifeq ($(PRODUCT_TYPE), go)
+PRODUCT_PACKAGES += \
+    TrebuchetQuickStepGo
+
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    TrebuchetQuickStepGo
+else
+PRODUCT_PACKAGES += \
+    TrebuchetQuickStep
+
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    TrebuchetQuickStep
+endif
+
 endif
 
 # Themes
