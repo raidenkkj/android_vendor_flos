@@ -252,6 +252,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     rsync
 
+# SoftAPManager
+PRODUCT_PACKAGES += \
+    SoftAPManager
+
 # Charger
 PRODUCT_PACKAGES += \
     product_charger_res_images
