@@ -25,7 +25,8 @@ endif
 PRODUCT_PACKAGES += \
     LineageNavigationBarNoHint \
     NavigationBarMode2ButtonOverlay \
-    LineageNavigationBarNoHint
+    LineageNavigationBarNoHint \
+    NavigationBarMode2ButtonOverlay
 
 # Media
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
