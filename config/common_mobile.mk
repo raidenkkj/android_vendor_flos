@@ -1,10 +1,12 @@
 # Inherit common mobile Lineage stuff
 $(call inherit-product, vendor/lineage/config/common.mk)
 
+ifneq ($(WITH_GMS),true)
 # Default notification/alarm sounds
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.config.notification_sound=Argon.ogg \
     ro.config.alarm_alert=Hassium.ogg
+endif
 
 # Apps
 PRODUCT_PACKAGES += \
