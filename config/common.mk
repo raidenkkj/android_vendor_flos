@@ -297,6 +297,9 @@ PRODUCT_PACKAGE_OVERLAYS += \
     vendor/lineage/overlay/common \
     vendor/lineage/overlay/no-rro
 
+PRODUCT_PACKAGES += \
+    NetworkStackOverlay
+
 PRODUCT_VERSION_MAJOR = 19
 PRODUCT_VERSION_MINOR = 1
 PRODUCT_VERSION_MAINTENANCE := 0
