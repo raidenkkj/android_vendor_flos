@@ -24,7 +24,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=1
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.sys.strictmode.disable=true
 endif
 
-BUILD_FINGERPRINT := google/redfin/redfin:13/TP1A.220624.014/8819323:user/release-keys
+BUILD_FINGERPRINT := google/redfin/redfin:13/TP1A.220905.004/8927612:user/release-keys
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
